@@ -1,4 +1,4 @@
-name: Extract Jira Ticket from Branch
+name: Extract Jira Ticket from Branch.
 
 on:
   pull_request:

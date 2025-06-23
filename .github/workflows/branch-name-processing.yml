@@ -17,7 +17,7 @@ jobs:
       - name: Extract Jira Ticket ID from branch name
         id: extract
         run: |
-          BRANCH_NAME="${GITHUB_REF##*/}"
+          BRANCH_NAME="${GITHUB_HEAD_REF}"
           echo "Branch name: $BRANCH_NAME"
           # Regex for JIRA ticket (e.g., PROJ-1234)
           if [[ "$BRANCH_NAME" =~ ([A-Z]+-[0-9]+) ]]; then

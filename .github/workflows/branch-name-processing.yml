@@ -21,6 +21,10 @@ jobs:
           echo "Branch name: $BRANCH_NAME"
           fi
 
+      - name: Give branch name to AI agent to exctract the jira id
+        run: |
+          echo "Here I give {{BRANCH_NAME}} to AI agent written in C# to extract the Jira ID and return it as output (id and relevant information)"
+
       - name: Use Jira Ticket ID
         run: |
-          echo "Jira Ticket ID is ${{ steps.extract.outputs.jira_id }}"
+          echo "Jira Ticket ID is defined and ai agent finds relevant information from existing files and compares it to extracted information"

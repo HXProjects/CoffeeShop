@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "CoffeeShopApp": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:55179;http://localhost:55180"
+    }
+  }
+}

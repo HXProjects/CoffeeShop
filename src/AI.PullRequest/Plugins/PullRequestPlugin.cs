@@ -3,7 +3,7 @@ using Microsoft.SemanticKernel;
 using System.Text.RegularExpressions;
 public class PullRequestPlugin
 {
-    [KernelFunction("navigate_url_to_get_branch_name")]
+    [KernelFunction("navigate_url_to_extract_branch_name")]
     [Description("Navigates to url and extracts the branch name from a pull request")]
     [return: Description("branch name")]
     public string GetBranchNameFromPullRequest(string pullRequestUrl)

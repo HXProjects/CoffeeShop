@@ -10,7 +10,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "https": {
+    "CoffeeShop.Api": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,

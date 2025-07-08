@@ -19,7 +19,7 @@ PromptExecutionSettings settings = new()
     FunctionChoiceBehavior = FunctionChoiceBehavior.Auto(),
 };
 
-string pullRequestUrl = "https://github.com/HXProjects/CoffeeShop/pull/3";
+string pullRequestUrl = "https://github.com/HXProjects/CoffeeShop/pull/4";
 
 var findBranchInstruction = string.Format(BranchPrompts.CreateBranchPromptTemplate, pullRequestUrl);
 

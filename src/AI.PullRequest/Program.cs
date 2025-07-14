@@ -38,9 +38,10 @@ builder.Plugins.AddFromType<PullRequestPlugin>();
 builder.Plugins.AddFromObject(jiraPlugin);
 var kernel = builder.Build();
 
+//var branchnameFunction = kernel.GetRequiredService<PullRequestPlugin>();
 PromptExecutionSettings settings = new()
 {
-    FunctionChoiceBehavior = FunctionChoiceBehavior.Auto(),
+    FunctionChoiceBehavior = FunctionChoiceBehavior.Auto(/*[branchnameFunction.GetBranchNameFromPullRequest]*/),
 };
 
 string pullRequestUrl = "https://github.com/HXProjects/CoffeeShop/pull/4";
@@ -77,6 +78,7 @@ chatHistory.Add(new ChatMessageContent(AuthorRole.User, linkedTestCasesPrompt));
 
 var linkedTestCases = await chatCompletionService.GetChatMessageContentAsync(chatHistory, settings, kernel: kernel);
 Console.WriteLine(linkedTestCases);
+chatHistory.Add(new ChatMessageContent(AuthorRole.Assistant, linkedTestCases.ToString()));
 
 Console.ReadLine();
 
